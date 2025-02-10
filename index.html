@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamza Abboud - Memories</title>
+  <meta name="description"
+    content="Hello there, I'm Hamza Abboud – a young undergraduate student who loves life and this is Istanbul through my eyes.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="dist/assets/favicon.ico" />
+  <link rel="stylesheet" href="dist/output.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Start - Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+  <!-- End - Fonts -->
+  <!-- Start - Fancybox Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <!-- End - Fancybox Scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      content: ["./dist/*.{html,js}"],
+      theme: {
+        extend:
+                {
+                  fontFamily: {
+                    'nothingyoucoulddo': ['Nothing You Could Do', 'cursive'],
+                    'signika': ['Signika', 'sans-serif'],
+                  },
+                },
+      },
+      plugins: [],
+    }
+  </script>
+</head>
+
+<body
+  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+  <!-- Navbar -->
+  <header class="flex w-full overflow-hidden pt-10 pb-1">
+    <!-- Navbar -->
+    <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
+      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
+        <div class="mr-4 md:mr-8">
+          <a href="index.html" class="text-2xl font-signika font-bold">HAMZA ABBOUD</a>
+        </div>
+        <div class="ml-auto md:hidden flex items-center justify-start">
+          <button onclick="menuToggle()" @click="open = !open"
+            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
+            @click="open = !open">
+            <span class="sr-only">Open main menu</span>
+            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
+                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+              <span aria-hidden="true"
+                class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
+                :class="{'opacity-0': open } "></span>
+              <span aria-hidden="true"
+                class="block absolute h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
+                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+            </div>
+          </button>
+        </div>
+        <div id="menu"
+          class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center">
+          <ul id="ulMenu"
+            class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
+            <li class="group transition duration-300">
+              <a href="index.html" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
+                <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+            <li class="group transition duration-300">
+              
+              </a>
+            </li>
+            
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Content -->
+  <div class="container mx-auto">
+    <h1 class="text-4xl pt-10 pb-8 font-bold">ISTANBUL 2024</h1>
+    <section class="text-neutral-700">
+      <div class="container w-full">
+        <div class="flex flex-wrap w-full">
+          <div class="flex w-full md:w-1/2 flex-wrap">
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/bench.jpeg" data-fancybox="gallery">
+                  <img alt="bench"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/bench.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/cat.jpeg" data-fancybox="gallery">
+                  <img alt="cat"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/cat.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/boat.jpeg" data-fancybox="gallery">
+                  <img alt="boat"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/boat.jpeg" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex w-full md:w-1/2 flex-wrap">
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/bridge.jpeg" data-fancybox="gallery">
+                  <img alt="bridge"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/bridge.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/dogs.jpeg" data-fancybox="gallery">
+                  <img alt="dogs"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/dogs.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/greentea.jpeg" data-fancybox="gallery">
+                  <img alt="greentea"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/greentea.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/koran.jpeg" data-fancybox="gallery">
+                  <img alt="koran"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/koran.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/night.jpeg" data-fancybox="gallery">
+                  <img alt="night"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/night.jpeg" />
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="flex w-full md:w-1/2 flex-wrap">
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/quran.jpeg" data-fancybox="gallery">
+                  <img alt="quran"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/quran.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/venice.jpeg" data-fancybox="gallery">
+                  <img alt="venice"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/venice.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/tower.jpeg" data-fancybox="gallery">
+                  <img alt="tower"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/tower.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/sunset.jpeg" data-fancybox="gallery">
+                  <img alt="sunset"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/sunset.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/stairs.jpeg" data-fancybox="gallery">
+                  <img alt="stairs"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/stairs.jpeg" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex w-full md:w-1/2 flex-wrap">
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/stadium.jpeg" data-fancybox="gallery">
+                  <img alt="stadium"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/stadium.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/skyline.jpeg" data-fancybox="gallery">
+                  <img alt="skyline"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/skyline.jpeg" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="dist/assets/villa.jpeg" data-fancybox="gallery">
+                  <img alt="villa"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="dist/assets/villa.jpeg" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="max-w-screen-xl py-16 mx-auto">
+      <div class="grid grid-cols-1 gap-8 text-center mx-auto">
+        <div>
+          <p class="font-signika"><b>HAMZA ABBOUD</b></p>
+          <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+            LONDON, UNITED KINGDOM<br />+44 7753923058
+          </p>
+          <div class="flex mx-auto">
+            <div class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300">
+              <a class="transition duration-300 hover:opacity-75" href="https://github.com/ctrl-hamza" target="_blank" rel="noreferrer">
+                <span class="sr-only">GitHub</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+              </a>
+              
+              <a class="transition duration-300 hover:opacity-75" href="mailto:14.ahamzaa@gmail.com" target="_blank" rel="noreferrer">
+                <span class="sr-only">Email</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M0 4a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H2a2 2 0 01-2-2V4zm2-1a1 1 0 00-1 1v.217l7 4.2 7-4.2V4a1 1 0 00-1-1H2zm13 2.383l-4.803 2.882L15 11.383V5.383zM1 5.383v6l4.803-2.882L1 5.383zM14.803 12.617L8 8.383l-6.803 4.234A1 1 0 002 13h12a1 1 0 00.803-.383z"/>
+                </svg>
+              </a>
+              <a class="transition duration-300 hover:opacity-75" href="https://www.linkedin.com/in/hamza-abboud/" target="_blank" rel="noreferrer">
+                <span class="sr-only">LinkedIn</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 01.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
+        © 2025 Made by yours truly - 
+        <a href="https://www.linkedin.com/in/hamza-abboud/" class="underline">Hamza Abboud</a>
+      </p>
+    </div>
+  </footer>
+  <!-- Script for the LightBox -->
+  <script>
+    Fancybox.bind("[data-fancybox]", {});
+  </script>
+  <script src="dist/fade_in.js"></script>
+  <script src="dist/menu.js"></script>
+</body>
+
+</html>
